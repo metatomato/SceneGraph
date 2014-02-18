@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="app_name">SceneGraph</string>
+
+     <string name="dummy">iGLou</string>
+    <string name="gl2jni_activity">GL2JNI</string>
+    <string name="snapshot">SnapShot!!</string>
+    <string name="show">Show!!</string>
+    <string name="next">NEXT!!</string>
+    <string name="outliner_title">OUTLINER</string>
+	<string name="light0">LIGHT 0</string>
+	<string name="light1">LIGHT 1</string>
+	<string name="light2">LIGHT 2</string>
+	<string name="light3">LIGHT 3</string>
+	<string name="set_shadow">Shadow Source</string>
+	<string name ="pos_title">Position \u0026 Direction</string>
+	<string name ="lightenning_title">Shadow \u0026 Light</string>
+	<string name ="X">X</string>
+	<string name ="Y">Y</string>
+	<string name ="Z">Z</string>
+	<string name ="DIRX">DIR X</string>
+	<string name ="DIRY">DIR Y</string>
+	<string name ="DIRZ">DIR Z</string>
+	<string name ="z_bar">Y</string>
+	<string name ="light_type">Type</string>
+	<string name ="light_energy">Energy</string>
+	
+	<string name ="default_library_cell">XXX</string>
+	
+	<string-array name="light_type">
+        <item>SUN</item>
+        <item>POINT</item>
+        <item>SPOT</item>
+    </string-array>
+    
+</resources>

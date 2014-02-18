@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="scene_height_title">25dp</dimen>
+	 <dimen name="scene_height_small_item">50dp</dimen>
+	 <dimen name="scene_height_medium_item">75dp</dimen>
+	 <dimen name="scene_height_big_item">200dp</dimen> 
+	 <dimen name="text_form">14sp</dimen>
+	 <dimen name="text_form_small">13sp</dimen>   
+	 
+	 <!-- library activity -->
+	 <dimen name="library_cell_height">100dp</dimen>
+	 <dimen name="library_cell_image_height">90dp</dimen>
+	 <dimen name="library_cell_image_width">160dp</dimen>
+	 
+	 <dimen name="library_cell_padding_top">5dp</dimen>
+	 <dimen name="library_cell_padding_bottom">5dp</dimen>
+	 <dimen name="library_cell_padding_left">5dp</dimen>
+	 
+	 <dimen name="library_image_padding_right">10dp</dimen>
+	 <dimen name="big_item">75dp</dimen> 
+	 <dimen name="cell_title_text_size">15sp</dimen>
+	 <dimen name="cell_text_size">13sp</dimen> 
+	 <integer name="cell_title_text_span">9</integer>
+	 <integer name="cell_text_span">8</integer>
+	 
+	 <!-- GLConfigurator -->
+	 <dimen name="right_drawer">600dp</dimen>
+	 
+	 <dimen name="layout_padding">15dp</dimen>
+	 
+	 <dimen name="offset_top">215dp</dimen>
+	 <dimen name="offset_left">335dp</dimen>
+	 <dimen name="offset_bottom">345dp</dimen>
+	 <dimen name="offset_right">585dp</dimen>
+	 
+	 <dimen name="frame_X">320dp</dimen>
+	 <dimen name="frame_Y">200dp</dimen>
+	 
+	 <dimen name="frame_offset_bottom">145dp</dimen>
+	 <dimen name="frame_offset_right">365dp</dimen>
+	 
+</resources>
+
+<!-- Default Device (<= 640dp) -->

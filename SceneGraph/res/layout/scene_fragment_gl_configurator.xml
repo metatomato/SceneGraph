@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/layout_padding"
+    android:paddingTop="@dimen/layout_padding" >
+    
+    <FrameLayout
+        android:id="@+id/scene_map_frame"
+        android:layout_width = "@dimen/frame_X"
+        android:layout_height = "@dimen/frame_Y"
+        android:layout_alignParentTop="true">
+        <ImageView
+	        android:id="@+id/scene_map"
+	        android:layout_width = "wrap_content"
+	        android:layout_height = "wrap_content"
+	        android:adjustViewBounds="true"	        
+	        android:gravity="top"
+	        android:src = "@drawable/iglou_splash_2k"
+   		/>
+    </FrameLayout>
+	
+      
+    
+    <RadioGroup        
+        android:id="@+id/scene_light_selector_group"
+        android:layout_width = "@dimen/frame_X"
+        android:layout_height = "50dp"
+        android:layout_below="@+id/scene_map_frame"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+     >
+		 <RadioButton
+		     android:id="@+id/scene_light0"
+	       	 android:layout_width = "0dp"
+	       	 android:layout_height = "match_parent"
+	       	 android:layout_weight = "1"
+	       	 android:gravity="center"
+	       	 android:textColor="@android:color/white"
+	       	 android:text="@string/light0"
+	       	 android:button="@null"
+	       	 android:background="@drawable/scene_data_selector"
+	     />   
+	     <RadioButton
+		     android:id="@+id/scene_light1"
+	       	 android:layout_width = "0dp"
+	       	 android:layout_height = "match_parent"
+	       	 android:layout_weight = "1"
+	       	 android:gravity="center"
+	       	 android:textColor="@android:color/white"
+	       	 android:text="@string/light1"
+	       	 android:button="@null"
+	       	 android:background="@drawable/scene_data_selector"
+	     />
+	     <RadioButton
+		     android:id="@+id/scene_light2"
+	       	 android:layout_width = "0dp"
+	       	 android:layout_height = "match_parent"
+	       	 android:layout_weight = "1"
+	       	 android:gravity="center"
+	       	 android:textColor="@android:color/white"
+	       	 android:text="@string/light2"
+	       	 android:button="@null"
+	       	 android:background="@drawable/scene_data_selector"
+	     />
+	     <RadioButton
+		     android:id="@+id/scene_light3"
+	       	 android:layout_width = "0dp"
+	       	 android:layout_height = "match_parent"
+	       	 android:layout_weight = "1"
+	       	 android:gravity="center"
+	       	 android:textColor="@android:color/white"
+	       	 android:text="@string/light3"
+	       	 android:button="@null"
+	       	 android:background="@drawable/scene_data_selector"
+	     />
+	 </RadioGroup>
+
+
+<!-- AMBIENT LIGHT BAR --> 
+
+	<TextView
+	    android:id="@+id/scene_ambient_light_label"
+        android:layout_width = "320dp"
+        android:layout_height = "25dp"
+        android:layout_below="@id/scene_light_selector_group"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="15dp"
+        android:text="Ambient Light Energy"
+        android:textColor="@android:color/white"
+	    />
+
+	<View
+        android:layout_width = "320dp"
+        android:layout_height = "1dp"
+        android:layout_below="@id/scene_ambient_light_label"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="15dp"
+        android:background="@color/iglou_blue"
+	    />
+	
+    <SeekBar        
+        android:id="@+id/scene_ambient_light_bar"
+        android:layout_width = "320dp"
+        android:layout_height = "50dp"
+        android:layout_below="@id/scene_ambient_light_label"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="16dp"
+        android:max="100"
+     />
+    
+   
+    <ScrollView
+       	android:layout_width = "match_parent"
+       	android:layout_height = "match_parent"
+        android:layout_alignParentTop="true"
+     	android:layout_toRightOf="@id/scene_map_frame"
+        >
+    
+	    <RelativeLayout
+	        android:id="@+id/scene_light_params"
+	        android:layout_width = "wrap_content"
+	        android:layout_height = "match_parent"
+	        
+	        >
+			     
+		<!-- TITLE POS & DIR -->   
+		   <TextView 
+		         android:id="@+id/scene_light_pos_title"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_title"
+		       	 android:layout_alignParentTop="true"
+		       	 android:layout_alignParentLeft="true"
+		       	 android:gravity="center"
+		       	 android:text="@string/pos_title"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@android:color/white"
+		       	 android:paddingLeft="15dp"
+		        />
+			
+			<View 
+		         android:id="@+id/scene_light_pos_title_bar"
+		       	 android:layout_width = "match_parent"
+		       	 android:layout_height = "1dp"
+		       	 android:layout_below="@id/scene_light_pos_title"
+		       	 android:layout_alignParentLeft="true"
+		       	 android:gravity="center"
+		       	 android:text="@string/pos_title"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:background="@color/iglou_blue"
+		       	 android:layout_marginLeft="10dp"
+		        />
+			
+		<!-- LIGHT POSITION SETUP -->
+		    <TextView 
+		         android:id="@+id/scene_light_pos_x_label"
+		       	 android:layout_width = "25dp"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_below="@id/scene_light_pos_title_bar"
+		       	 android:layout_alignParentLeft="true"
+		       	 android:gravity="center"
+		       	 android:text="@string/X"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		       	 android:imeOptions="actionDone"
+		        />
+		    
+		    <EditText 
+		         android:id="@+id/scene_light_pos_x"
+		       	 android:layout_width = "@dimen/scene_height_medium_item"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignBaseline="@id/scene_light_pos_x_label"
+		       	 android:layout_toRightOf="@id/scene_light_pos_x_label"
+		       	 android:gravity="center_vertical"
+		       	 android:inputType="number|numberSigned|numberDecimal"
+		       	 android:selectAllOnFocus="true"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <TextView 
+		         android:id="@+id/scene_light_pos_y_label"
+		       	 android:layout_width = "25dp"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignParentLeft="true"
+		       	 android:layout_below="@id/scene_light_pos_x_label"
+		       	 android:gravity="center"
+		       	 android:text="@string/Y"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <EditText 
+		         android:id="@+id/scene_light_pos_y"
+		       	 android:layout_width = "@dimen/scene_height_medium_item"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignBottom="@id/scene_light_pos_y_label"
+		       	 android:layout_toRightOf="@id/scene_light_pos_y_label"
+		       	 android:gravity="center_vertical"
+		       	 android:inputType="number"
+		       	 android:selectAllOnFocus="true"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <TextView 
+		         android:id="@+id/scene_light_pos_z_label"
+		       	 android:layout_width = "25dp"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignParentLeft="true"
+		       	 android:layout_below="@id/scene_light_pos_y_label"
+		       	 android:gravity="center"
+		       	 android:text="@string/Z"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <EditText 
+		         android:id="@+id/scene_light_pos_z"
+		       	 android:layout_width = "@dimen/scene_height_medium_item"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignBottom="@id/scene_light_pos_z_label"
+		       	 android:layout_toRightOf="@id/scene_light_pos_z_label"
+		       	 android:gravity="center_vertical"
+		       	 android:inputType="number"
+		       	 android:selectAllOnFocus="true"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		<!-- LIGHT DIRECTION SETUP -->
+		    
+		     <TextView 
+		         android:id="@+id/scene_light_dir_x_label"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_toRightOf="@id/scene_light_pos_x"
+		       	 android:layout_below="@id/scene_light_pos_title_bar"
+		       	 android:gravity="center"
+		       	 android:text="@string/DIRX"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <EditText 
+		         android:id="@+id/scene_light_dir_x"
+		       	 android:layout_width = "@dimen/scene_height_medium_item"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignBaseline="@id/scene_light_dir_x_label"
+		       	 android:layout_toRightOf="@id/scene_light_dir_x_label"
+		       	 android:gravity="center_vertical"
+		       	 android:inputType="number"
+		       	 android:selectAllOnFocus="true"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <TextView 
+		         android:id="@+id/scene_light_dir_y_label"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_toRightOf="@id/scene_light_pos_y"
+		       	 android:layout_below="@id/scene_light_dir_x_label"
+		       	 android:gravity="center"
+		       	 android:text="@string/DIRY"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <EditText 
+		         android:id="@+id/scene_light_dir_y"
+		       	 android:layout_width = "@dimen/scene_height_medium_item"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignBottom="@id/scene_light_pos_y_label"
+		       	 android:layout_toRightOf="@id/scene_light_dir_y_label"
+		       	 android:gravity="center_vertical"
+		       	 android:inputType="number"
+		       	 android:selectAllOnFocus="true"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <TextView 
+		         android:id="@+id/scene_light_dir_z_label"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_toRightOf="@id/scene_light_pos_z"
+		       	 android:layout_below="@id/scene_light_dir_y_label"
+		       	 android:gravity="center"
+		       	 android:text="@string/DIRZ"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		    
+		    <EditText 
+		         android:id="@+id/scene_light_dir_z"
+		       	 android:layout_width = "@dimen/scene_height_medium_item"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignBottom="@id/scene_light_pos_z_label"
+		       	 android:layout_toRightOf="@id/scene_light_dir_z_label"
+		       	 android:gravity="center_vertical"
+		       	 android:inputType="number"
+		       	 android:selectAllOnFocus="true"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@color/text_data_selector"
+		        />
+		
+		<!-- SEEKBAR Z POSIITON -->   
+			<TextView 
+		         android:id="@+id/scene_light_z_bar_label"
+		       	 android:layout_width = "25dp"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignParentLeft="true"
+		       	 android:layout_below="@id/scene_light_pos_z_label"
+		       	 android:gravity="center"
+		       	 android:text="@string/z_bar"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@android:color/white"
+		        />
+		 
+			<SeekBar 
+			    android:id="@+id/scene_light_z_bar" 
+			    android:max="100"
+			    android:layout_width="match_parent" 
+			    android:layout_height="@dimen/scene_height_small_item" 
+			    android:layout_toRightOf="@id/scene_light_z_bar_label" 
+			    android:layout_below="@id/scene_light_pos_z_label"
+			    android:gravity="center_vertical"
+			    android:paddingTop="15dp"
+			    />
+			
+			
+		<!-- TITLE LIGHTING SETTINGS -->   
+		   <TextView 
+		         android:id="@+id/scene_lightenning_title"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_title"
+		       	 android:layout_below="@id/scene_light_z_bar_label"
+		       	 android:layout_alignLeft="@id/scene_light_pos_title"
+		       	 android:gravity="center"
+		       	 android:text="@string/lightenning_title"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@android:color/white"
+		       	 android:paddingLeft="15dp"
+		        />
+			
+			<View 
+		         android:id="@+id/scene_lightenning_title_bar"
+		       	 android:layout_width = "match_parent"
+		       	 android:layout_height = "1dp"
+		       	 android:layout_below="@id/scene_lightenning_title"
+		       	 android:layout_alignLeft="@id/scene_lightenning_title"
+		       	 android:gravity="center"
+		       	 android:text="@string/pos_title"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:background="@color/iglou_blue"
+		       	 android:layout_marginLeft="10dp"
+		        />
+			
+			
+		<!-- LIGHT TYPE SPINNER -->
+		    <TextView 
+		         android:id="@+id/scene_light_type_label"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_small_item" 
+		       	 android:layout_below="@id/scene_lightenning_title_bar"
+		       	 android:layout_alignLeft="@id/scene_lightenning_title"
+		       	 android:gravity="center"
+		       	 android:text="@string/light_type"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@android:color/white"
+		       	 android:paddingLeft="15dp"
+		        />
+		    
+		    <Spinner
+			    android:id="@+id/scene_light_type"
+			    android:layout_width="wrap_content"
+			    android:layout_height="@dimen/scene_height_small_item" 
+			    android:layout_toRightOf="@id/scene_light_type_label"
+			   	android:layout_alignBaseline="@id/scene_light_type_label"
+		       	 />
+		    
+		    
+		<!-- SHADOW ENABLE CHECKBOX -->
+		   <CheckBox
+		        android:id="@+id/scene_light_shadow_box"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_small_item" 
+		       	 android:layout_below="@id/scene_light_type_label"
+		       	 android:layout_alignLeft="@id/scene_lightenning_title"
+		       
+		       /> 
+		       
+		   <TextView
+		        android:id="@+id/scene_light_shadow_box_label"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_small_item" 
+		       	 android:layout_alignTop="@id/scene_light_shadow_box"
+		       	 android:layout_toRightOf="@id/scene_light_shadow_box"
+		       	 android:text="@string/set_shadow"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@android:color/white" 
+		       	 android:gravity="center"
+		       />       
+		       
+		<!-- SEEKBAR ENERGY -->   
+			 <EditText 
+		         android:id="@+id/scene_light_energy"
+		       	 android:layout_width = "wrap_content"
+		       	 android:layout_height = "@dimen/scene_height_small_item"
+		       	 android:layout_alignLeft="@id/scene_lightenning_title"
+		       	 android:layout_below="@id/scene_light_shadow_box"
+		       	 android:gravity="center_vertical"
+		       	 android:drawableLeft="@drawable/ic_lock_idle_low_battery"
+		       	 android:inputType="number"
+		       	 android:selectAllOnFocus="true"
+		       	 android:textSize="@dimen/text_form"
+		       	 android:textColor="@android:color/white"
+		        />	
+			<SeekBar 
+			    android:id="@+id/scene_light_energy_bar" 
+			    android:max="100"
+			    android:layout_width="match_parent" 
+			    android:layout_height="@dimen/scene_height_small_item" 
+			    android:layout_toRightOf="@id/scene_light_energy" 
+			    android:layout_alignBottom="@id/scene_light_energy" 
+			    android:paddingTop="15dp"
+			    >
+			</SeekBar>
+		</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

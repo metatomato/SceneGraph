@@ -1,0 +1,65 @@
+<!-- SCENE OUTLINER (CONTAINED BY DRAWER LEFT) -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:background="@color/iglou_gray_A"
+        >
+	     
+<!-- OUTLINER HEADER -->
+        <Button
+	        android:id="@+id/scene_all_expand"
+	        android:layout_width = "40dp"
+	        android:layout_height = "50dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:focusable="false"
+	        android:background="@android:color/transparent"
+        />
+        
+	    <TextView
+		    android:id="@+id/scene_outliner_header"
+	        android:layout_width="match_parent"
+	    	android:layout_height="50dp"
+	    	android:text="@string/outliner_title"
+	    	android:textColor="@android:color/white"
+	    	android:layout_alignParentTop="true"
+	    	android:layout_centerHorizontal="true"
+	    	android:gravity="center"
+	    	android:paddingRight = "5dp"
+	    	android:background="@color/iglou_gray_A"
+	    	android:textSize="24sp"
+	    	android:drawableRight="@drawable/scene_eye"
+	    	android:drawableLeft="@drawable/expander_open_holo_light"
+        /> 
+        
+	    <View
+	        android:layout_width="match_parent"
+	    	android:layout_height="5dp"
+	    	android:layout_below="@id/scene_outliner_header"
+	    	android:layout_centerHorizontal="true"
+	    	android:background="@drawable/scene_outliner_shadow"
+	        />
+        
+	    <Button
+	        android:id="@+id/scene_all_visible"
+	        android:layout_width = "40dp"
+	        android:layout_height = "50dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:focusable="false"
+	        android:background="@android:color/transparent"
+        />
+
+<!-- ITEM LIST -->	    
+	    <ExpandableListView
+	        android:id="@+id/outliner_item_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_below="@+id/scene_outliner_header"
+	        android:choiceMode="singleChoice"
+	        android:divider="@null"
+	        android:dividerHeight="1dp"
+	        />
+</RelativeLayout>

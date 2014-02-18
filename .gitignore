@@ -1,0 +1,15 @@
+#Eclipse specific project files
+.metadata/
+.classpath
+.cproject
+.project
+
+
+#android project binaries and libraries
+obj/
+gen/
+bin/
+libs/
+
+#Mac OS platform dependent
+.DS_Store

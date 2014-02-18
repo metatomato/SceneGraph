@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:layout_width = "wrap_content"
+        android:layout_height = "match_parent"
+        android:layout_alignParentRight = "true"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        >
+        
+    <ImageView
+        android:layout_width = "@dimen/scene_height_small_item"
+        android:layout_height = "0dp"
+        android:layout_weight = "1"
+        android:src="@drawable/scene_cube"
+        android:onClick="SetMatCube"
+        />
+    
+    <ImageView
+        android:layout_width = "@dimen/scene_height_small_item"
+        android:layout_height = "0dp"
+        android:layout_weight = "1"
+        android:src="@drawable/scene_sphere"
+        android:onClick="SetMatSphere"
+        />
+    
+    <ImageView
+        android:layout_width = "@dimen/scene_height_small_item"
+        android:layout_height = "0dp"
+        android:layout_weight = "1"
+        android:src="@drawable/scene_cylinder"
+        android:onClick="SetMatCylinder"
+        />
+    
+    <ImageView
+        android:layout_width = "@dimen/scene_height_small_item"
+        android:layout_height = "0dp"
+        android:layout_weight = "1"
+        android:src="@drawable/scene_monkey"
+        android:onClick="SetMatSuzanne"
+        />
+    
+	</LinearLayout>
+</RelativeLayout>

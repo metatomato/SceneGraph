@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+      <bitmap android:src="@drawable/library_entity_light"
+        android:gravity="center" />
+    </item>
+    <item>
+      <bitmap android:src="@drawable/library_selection_arrow"
+        android:gravity="center" />
+    </item>
+
+</layer-list>
+
+

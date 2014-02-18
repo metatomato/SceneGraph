@@ -1,0 +1,135 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<gl.iglou.scenegraph.SceneDrawer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+    <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+	          
+	    <gl.iglou.scenegraph.GL2JNIView
+	        android:id="@+id/content_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" />
+	    
+	    <LinearLayout 
+	        android:id="@+id/scene_button_frame"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_centerHorizontal = "true"
+	     	android:layout_alignParentTop  = "true"
+	     	android:layout_marginTop ="10dp"
+        	android:orientation="horizontal" >
+        	
+		    <ImageButton
+		        android:id="@+id/scene_camera"
+	     		android:layout_height="50dp"
+	     		android:layout_width="0dp"
+	     		android:layout_weight="1"
+	     		android:src="@drawable/camera"
+	     		android:background="@null"
+	     		android:onClick="ScreenShot" 
+	     		/>
+		    
+		    <ImageButton
+		        android:id="@+id/scene_target"
+	     		android:layout_height="50dp"
+	     		android:layout_width="0dp"
+	     		android:layout_weight="1"
+	     		android:src="@drawable/scene_target_selector"
+	     		android:background="@null"
+	     		android:onClick="SwitchCameraMode"/>
+		    
+		     <ImageButton
+		        android:id="@+id/scene_mesh_mode"
+	     		android:layout_height="50dp"
+	     		android:layout_width="0dp"
+	     		android:layout_weight="1"
+	     		android:src="@drawable/scene_mesh_mode_selector"
+	     		android:background="@null"
+	     		android:onClick="SwitchMeshMode"/>
+		     
+		     <ImageButton
+		        android:id="@+id/scene_AABB_mode"
+	     		android:layout_height="50dp"
+	     		android:layout_width="0dp"
+	     		android:layout_weight="1"
+	     		android:src="@drawable/scene_aabb_selector"
+	     		android:background="@null"
+	     		android:onClick="SwitchAABBMode"/>
+		     
+	    </LinearLayout>
+	    
+	    <FrameLayout
+	     	android:id="@+id/scene_snapshot_container"
+     		android:layout_width="242dp"
+     		android:layout_height="152dp"
+     		android:layout_marginBottom="30dp"
+     		android:layout_marginLeft="30dp"
+     		android:layout_alignParentLeft = "true"
+     		android:layout_alignParentBottom  = "true"
+     		android:background="@color/iglou_gray_A"
+	    />	   	
+	    
+	     <ImageView 
+	        android:id="@+id/arrow_l"
+	        android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+	        android:src="@drawable/scene_arrow_l"
+	        android:layout_alignParentLeft = "true"
+     		android:layout_centerVertical  = "true"
+     		android:layout_marginLeft="10dp"
+	        />
+	     
+	     <ImageView 
+	        android:id="@+id/arrow_r"
+	        android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+	        android:src="@drawable/scene_arrow_r"
+	        android:layout_alignParentRight = "true"
+     		android:layout_centerVertical  = "true"
+     		android:layout_marginRight="10dp"
+	     />
+	     
+	     <TextView
+	         android:id="@+id/scene_selection"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentRight="true"
+	         android:layout_alignParentBottom="true"
+	         />
+	     
+	     <!--  Dummy Layer To Resolve Drawer Bug -->
+	     <ImageView 
+	        android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+	        android:background="@android:color/transparent"
+	     />
+	</RelativeLayout>
+	
+   
+<!--  Left Drawer implementation -->         
+    <FrameLayout
+        android:id="@+id/outliner_container"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:background="@color/iglou_gray" />  
+	        
+
+    <!--  Right Drawer implementation -->         
+    <FrameLayout
+        android:id="@+id/gl_configurator_container"
+        android:layout_width="@dimen/right_drawer"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:background="@drawable/scene_gl_configurator_background" /> 
+    
+</gl.iglou.scenegraph.SceneDrawer>

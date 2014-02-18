@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+    
+    
+    
+     <ImageView 
+	        android:id="@+id/snapshot"
+	        android:layout_width="240dp"
+        	android:layout_height="150dp"
+        	android:maxWidth="240dp"
+        	android:maxHeight="150dp"
+	        android:src="@drawable/iglou_splash_2k"
+	        android:layout_centerVertical = "true"
+     		android:layout_centerHorizontal  = "true"
+	        />
+
+     <ImageView 
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/scene_discard"
+        android:onClick="DiscardSnapshot"
+        />
+     
+     <ImageView 
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/scene_save"
+        android:onClick="SaveSnapshot"
+        />
+     
+     <ProgressBar
+        android:id="@+id/scene_snapshot_progress_bar"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_centerHorizontal="true"
+  		android:layout_centerVertical="true" />
+     
+</RelativeLayout>

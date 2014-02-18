@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/library_cell_height"
+    android:background="@drawable/scene_data_selector"
+    android:paddingTop ="@dimen/library_cell_padding_top"
+    android:paddingBottom="@dimen/library_cell_padding_bottom"
+    android:paddingLeft ="@dimen/library_cell_padding_top"
+	>
+    
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/library_cell_image_width"
+        android:layout_height="@dimen/library_cell_image_height"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical ="true"
+        android:layout_marginRight="@dimen/library_image_padding_right"
+        android:src="@drawable/iglou_sg_android"
+        android:layout_gravity ="center_vertical" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/library_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon"
+        android:layout_centerVertical ="true"
+        android:text="@string/default_library_cell"
+        android:textSize="@dimen/cell_title_text_size" 
+        android:minEms="@integer/cell_title_text_span"
+        android:gravity ="top">
+    </TextView>
+    
+    <TextView
+        android:id="@+id/library_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon"
+        android:layout_alignTop ="@id/icon"
+        android:text="subtitle"
+        android:textSize="@dimen/cell_text_size" 
+        android:gravity ="top">
+    </TextView>
+   
+    <TextView
+        android:id="@+id/obj_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/library_title"
+        android:layout_centerVertical ="true"
+        android:text="@string/default_library_cell"
+        android:textSize="@dimen/cell_text_size" 
+        android:minEms="@integer/cell_text_span"
+        android:gravity ="center_vertical|left">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tri_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/obj_number"
+        android:layout_centerVertical ="true"
+        android:text="@string/default_library_cell"
+        android:textSize="15sp" 
+        android:minEms="8"
+        android:gravity ="center_vertical|left">
+    </TextView>
+    
+
+</RelativeLayout> 

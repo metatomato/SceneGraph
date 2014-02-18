@@ -5,11 +5,13 @@
 .project
 
 
-#android project binaries and libraries
+#android project auto-generated
 obj/
 gen/
 bin/
 libs/
+project.properties
+proguard-project.txt
 
 #Mac OS platform dependent
 .DS_Store

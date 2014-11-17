@@ -34,7 +34,7 @@ LOCAL_SRC_FILES :=  Common/GUS.cpp\
 					Renderer/Light.cpp\
 					Renderer/Material.cpp\
 					Renderer/md5.cpp\
-					Renderer/md5animation.cpp\
+					Renderer/md5Animation.cpp\
 					Renderer/Mesh.cpp\
 					Renderer/RenderColor.cpp\
 					Renderer/RenderColorDBG.cpp\
@@ -50,7 +50,7 @@ LOCAL_SRC_FILES :=  Common/GUS.cpp\
 					Scene/Scene.cpp\
 					Scene/SceneObject.cpp\
 					Scene/SpaceObject.cpp\
-				    System/BroadCastingService.cpp\
+				    System/BroadcastingService.cpp\
 				    System/ChannelOffice.cpp\
 				    System/GusTV.cpp\
 				    System/Program.cpp\

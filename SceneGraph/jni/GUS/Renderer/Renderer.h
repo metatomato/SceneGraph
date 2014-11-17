@@ -11,7 +11,7 @@
 #include <iostream>
 #include "../Common/GUS.h"
 #include "../Common/Matrix.h"
-#include "../renderer/Shader.h"
+#include "../Renderer/Shader.h"
 #include "../Scene/Control.h"
 #include "../Common/RenderPass.h"
 
